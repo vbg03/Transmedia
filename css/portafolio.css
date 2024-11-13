@@ -10,7 +10,6 @@
 body {
     height: 100vh;
     background-color: black;
-    background-image: url("../imagenes/header2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,204 +167,99 @@ header {
     justify-content: center;
 }
 
-section#hero {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#titulo h1 {
+    color: white;
     text-align: center;
-    color: #fff;
+    margin-top: 100px;
+    font-size: 2.5rem;
 }
 
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-/* Estilos adicionales para secciones */
-section {
-    padding: 2rem;
-    color: #fff;
+#titulo h1 {
+    color: white;
     text-align: center;
+    margin-top: 100px;
+    font-size: 2.5rem;
 }
 
-#trailer h2, #personajes h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.trailer-video {
+#episodios {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 20px;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-top: 50px;
 }
 
-.personajes-container {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.personaje {
-    max-width: 200px;
-}
-
-.personaje img {
-    width: 100%;
+.episodio {
+    width: calc(500px);
+    height: 315px;
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-}
-
-.personaje h3 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-footer {
-    background-color: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-
-@media(max-width: 992px) {
-
-    .navbar .links,
-    .navbar .action-btn {
-        display: none;
-    }
-
-    .navbar .toggle-btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-}
-
-@media(max-width: 576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-}
-
-/* Estilos de la sección Introducción y Trailer */
-#intro-trailer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    color: #fff;
-}
-
-#intro-trailer .intro {
-    flex: 1;
-    padding-right: 2rem;
-}
-
-.trailer-video {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* Estilos de la sección Personajes */
-.personajes-container {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.personaje {
-    max-width: 200px;
-    padding: 1rem;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    text-align: center;
+    background-color: rgb(104, 72, 48);
     transition: transform 0.3s ease;
 }
 
-.personaje img {
+.episodio img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Baja la opacidad de la imagen */
     border-radius: 10px;
-    margin-bottom: 0.5rem;
 }
 
-/* Estilos de la sección Invitación */
-#invitacion {
-    text-align: center;
-    padding: 2rem;
-    color: #fff;
-}
-
-.invitacion-video {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-/* Estilos de la sección Contacto */
-#contacto {
-    text-align: center;
-    padding: 2rem;
-    color: #fff;
-}
-
-#contacto form {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border-radius: 10px;
 }
 
-#contacto input, #contacto textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.5rem;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
+.overlay h2 {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-#contacto button {
-    padding: 0.5rem 2rem;
+.episodio:hover {
+    transform: scale(1.05);
+}
+
+.ver-mas {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
     border: none;
-    background-color: orange;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 8px 16px;
     border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    transition: background-color 0.3s;
 }
 
-#contacto button:hover {
-    background-color: #e67e22;
+.ver {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.ver-mas:hover {
+    background-color: orange;
 }
 
-section {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-section.visible {
-    opacity: 1;
-    animation: fadeInUp 0.8s ease-out forwards;
+.ver:hover {
+    background-color: orange;
 }

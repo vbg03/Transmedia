@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Más allá del tiempo</title>
+    <link rel="stylesheet" href="../css/portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <script></script>
+    <header>
+        <div class="navbar">
+            <div class="logo">Más Allá Del Tiempo</div>
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="portafolio.html">Episodios</a></li>
+            </ul>
+            <a href="./index.html">
+                <button class="button">Saber Más</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="titulo">
+            <h1>EPISODIOS</h1>
+        </section>
+
+        <section id="episodios">
+            <div class="episodio">
+                <img src="../imagenes/1.png" alt="Episodio 1">
+                <div class="overlay">
+                    <h2>Episodio 1: <br>La creación del futuro</h2>
+                    <button class="ver" onclick="window.open('https://www.youtube.com/watch?v=Zhl5c7Uos_g&ab_channel=VALERIABOWERSGUTIERREZ', '_blank')">Mirar</button>
+                </div>
+            </div>
+
+            <div class="episodio">
+                <div class="overlay">
+                    <h2>Episodio 2: <br>Los misterios del tiempo</h2>
+                    <button class="ver-mas" onclick="alertProximamente()">Próximamente</button>
+                </div>
+            </div>
+
+            <div class="episodio">
+                <div class="overlay">
+                    <h2>Episodio 3: <br>El viaje eterno</h2>
+                    <button class="ver-mas" onclick="alertProximamente()">Próximamente</button>
+                </div>
+            </div>
+
+            <div class="episodio">
+                <div class="overlay">
+                    <h2>Episodio 4: <br>El dilema</h2>
+                    <button class="ver-mas" onclick="alertProximamente()" >Próximamente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Más Allá Del Tiempo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/episodios.js"></script>
 </body>
+
 </html>

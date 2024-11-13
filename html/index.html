@@ -1,41 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Más allá del tiempo</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#">Más Allá Del Tiempo</a></div>
+            <div class="logo">Más Allá Del Tiempo</div>
             <ul class="links">
-                <li><a href="Inicio">Inicio</a></li>
-                <li><a href="Portafolio">Portafolio</a></li>
-                <li><a href="hero">Home</a></li>
-                <li><a href="hero">Home</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="portafolio.html">Episodios</a></li>
             </ul>
-            <a href="#" class="action-btn">Saber más</a>
-            <div class="toggle-btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-
-        <div class="dropdown_menu">
-            <li><a href="hero">Home</a></li>
-            <li><a href="hero">Portafolio</a></li>
-            <li><a href="hero">Home</a></li>
-            <li><a href="hero">Home</a></li>
-            <li><a href="#" class="action-btn">Saber más</a></li>
+            <button onclick="window.location.href='#invitacion'" class="button">Saber Más</button>
         </div>
     </header>
+    
+    <main>
+        <!-- Sección Hero -->
+        <section id="hero">
+            <h1>Bienvenidos a "Más Allá Del Tiempo"</h1>
+            <p>Explora los misterios de la inmortalidad y el dilema del tiempo.</p>
+        </section>
+
+        <!-- Sección Introducción y Trailer -->
+        <section id="intro-trailer">
+            <div class="intro">
+                <h2>Introducción a la Historia</h2>
+                <p>Sumérgete en un viaje que explora los límites del tiempo y la inmortalidad. ¿Qué costo tendría la vida eterna? Acompaña a nuestros personajes mientras enfrentan dilemas éticos y personales que cambiarán sus vidas para siempre.</p>
+            </div>
+            <div class="trailer-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QfUMN_3fl9Y?si=QVNOnuh2Tui3tYvz" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sección de Personajes -->
+        <section id="personajes">
+            <h2>Personajes Principales</h2>
+            <div class="personajes-container">
+                <div class="personaje">
+                    <img src="../imagenes/Alex.webp" alt="Dr. Alex Rivers">
+                    <h3>Dr. Alex Rivers</h3>
+                    <p>Un científico brillante que lucha por los misterios de la vida eterna.</p>
+                </div>
+                <div class="personaje">
+                    <img src="../imagenes/Morrow.webp" alt="Dr. Victor Morrow">
+                    <h3>Dr. Victor Morrow</h3>
+                    <p>El antagonista que desafía a Alex en su búsqueda de la inmortalidad.</p>
+                </div>
+                <div class="personaje">
+                    <img src="../imagenes/8.jpg" alt="Evelyn Stone">
+                    <h3>Evelyn Stone</h3>
+                    <p>Una aliada clave en la lucha entre el tiempo y la inmortalidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Invitación -->
+        <section id="invitacion">
+            <h2>Únete a la Historia</h2>
+            <p>Descubre más sobre el dilema de la inmortalidad y sé parte de esta emocionante aventura.</p>
+            <div class="invitacion-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RpvOMAZxYTA?si=a9-I75WTOHWnnJ_-" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2>Apóyanos con tu Mensaje</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <textarea placeholder="Mensaje de Apoyo"></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Más Allá Del Tiempo. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="../js/javascript.js"></script>
 </body>
-
 </html>
